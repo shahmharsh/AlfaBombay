@@ -1,0 +1,5 @@
+js/vertical_tabs.js /*Reference : http://stackoverflow.com/questions/16353427/how-to-hide-secondary-divs-on-page-load-in-jquery*/
+
+css/tabs.css /* Reference: http://www.faridesign.net/2012/05/create-a-awesome-vertical-tabbed-content-area-using-css3-jquery/ */
+
+CSS style http://iqonicdesign.com/ui/

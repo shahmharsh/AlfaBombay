@@ -1,0 +1,14 @@
+USE jadrn025;
+
+DROP TABLE if exists products;
+
+CREATE TABLE products (
+	sku char(9) NOT NULL PRIMARY KEY,
+	category varchar(50) NOT NULL,
+	vendor varchar(25) NOT NULL,
+	manufacturerID varchar(25) NOT NULL,
+	description varchar(100) NOT NULL,
+	features varchar(100) NOT NULL,
+	cost decimal(6,2) NOT NULL,
+	retail decimal(6,2) NOT NULL,
+	image_name varchar(50) ); 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+<!--    
+	Shah, Harsh    Account:  jadrn025
+        CS645, Spring 2014
+        Project #2
+-->
+
+<head>
+  <title>Login Page</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+  <script type="text/javascript">
+    if(!navigator.cookieEnabled) {
+      alert("Cookies are disabled in your browser. You must enable cookies to use this application.");
+    }  
+  </script>	           	
+</head>
+
+<body>
+ 
+  <div class="company-header">
+    <img src="images/logo.png" height="80px">
+  </div>
+  
+  <!--<img id="display-img" src="images/display.jpg" alt="Display Image" />-->
+
+  <div class="login-form">
+    <form method="post" 
+          action="/jadrn025/servlet/Login"
+          name="login">
+      <img id="login-phone-img" src="images/mobile.png" alt="Login Image" />
+      <div class="login-header">Inventory Management <br> Log In </div>
+      <p class="text-style">
+        Username: <br /> <input type="text" name="user" placeholder = "username" required/><br /><br/>
+        Password: <br /> <input type="password" name="pass" placeholder = "password" required/><br />
+      </p>
+      <p>
+        <input class="button" type="reset" value="Clear" />
+        <input class="button" type="submit" value="Log In" />
+      </p>
+    </form>
+    <div class="error-message"> You have successfully logged out </div>
+  </div>
+
+  <script type="text/javascript">
+    document.login.user.focus();
+  </script>
+
+</body>
+</html>

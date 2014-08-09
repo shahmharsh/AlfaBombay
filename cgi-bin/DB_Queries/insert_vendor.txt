@@ -1,0 +1,15 @@
+USE jadrn025;
+
+INSERT INTO vendor(name) values ('Apple');
+INSERT INTO vendor(name) values ('Nokia');
+INSERT INTO vendor(name) values ('HTC');
+INSERT INTO vendor(name) values ('Karbonn');
+INSERT INTO vendor(name) values ('Samsung');
+
+
+
+
+
+
+
+

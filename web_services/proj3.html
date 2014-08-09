@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+<!--    
+	Shah, Harsh    Account:  jadrn025
+        CS645, Spring 2014
+        Project #3
+-->
+    <head>
+        <title>
+            AlfaBombay
+        </title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/UI.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="js/shopping_cart.js"></script>
+	<script type="text/javascript" src="js/onlyFunctions.js"></script>
+	<script type="text/javascript" src="js/customer.js"></script>
+	
+        <script type="text/javascript">
+            if(!navigator.cookieEnabled) {
+            alert("Cookies are disabled in your browser. You must enable cookies to use this application.");
+            }  
+        </script>	           	
+    </head>
+    
+    <body>
+	<div class="company-header">
+            <a href="proj3.html"><img src="images/logo.png" height="80px"/></a> An online Cell Phone Store..
+        </div>
+        <br />
+	<div id="wrap">
+	    <ul class="navbar">
+		<li>Home</li>
+		<li>Smartphone</li>
+		<li>Touch Screen</a></li>
+		<li>Dual SIM</li>
+		<li>Single Sim</li>
+		<li>Tablet</li>
+	    </ul>
+       </div>
+	
+	<div id="Search-Box">
+	    Search: <input type="text" id="search-text" />
+	    Vendor: <select name="vendorDropdown"> </select>
+	</div>
+	
+	<div id="cart">
+	    <button>
+		<img class="Lfloat" src="images/cart.png" height="30px"/>
+		<div class="Lfloat padding">CART : </div><div class="Lfloat padding" id="count">0</div>
+	    </button>
+	</div>
+	
+	<div id="products">
+	    <div class="element"></div>
+	</div>
+	<div class="customer-details"></div>
+	
+	<div id="product-details" title="Product Details">
+	    <div class="product-content"></div>
+	</div>
+	
+	<div id="customer-details" title="Payment">
+	    <table>
+		<tr>
+		    <td><label> First Name: </label></td>
+		    <td><input type="text" name="fname" placeholder="First Name" /></td>
+		</tr>
+		<tr>
+		    <td><label> Last Name: </label> </td>
+		    <td><input type="text" name="lname" placeholder="Last Name" /></td>
+		</tr>
+		<tr>
+		    <td><label> Phone: </label></td>
+		    <td><input type="text" name="phone" placeholder="123-456-7890" /></td>
+		</tr>
+		<tr>
+		    <td><label> Credit Card Number: </label></td>
+		    <td><input type="text" name="card-no" placeholder="xxxx-xxxx-xxxx-xxxx" /></td>
+		</tr>
+		<tr>
+		    <td><label> Expiration Date: </label></td>
+		    <td><input type="text" name="card-expdate" placeholder="mm/dd" /></td>
+		</tr>
+		<tr>
+		    <td><label> Security Code: </label></td>
+		    <td><input type="text" name="card-code" placeholder="xxx" /></td>
+		</tr>
+		<tr>
+		    <td colspan=2 class="center-align"><label> Billing Details: </label></td>
+		</tr>
+		<tr>
+		    <td><label> Address 1: </label></td>
+		    <td class="billing"><input type="text" name="addr1" placeholder="Address 1" /></td>
+	        </tr>
+		<tr>
+		    <td><label> Address 2: </label> </td>
+		    <td class="billing"><input type="text" name="addr2" placeholder="Address 2 (optional)" /></td>
+		</tr>
+		<tr>
+		    <td><label> City: </label></td>
+		    <td class="billing"><input type="text" name="city" placeholder="City" /></td>
+		</tr>
+		<tr>
+		    <td><label> State: </label></td>
+		    <td class="billing"><input type="text" name="state" placeholder="State" /></td>
+	        </tr>
+		<tr>
+		    <td><label> Zip: </label></td>
+		    <td class="billing"><input type="text" name="zip" placeholder="Zip" /></td>
+		</tr>
+		<tr>
+		    <td colspan=2 class="center-align"><label> Shipping Details: </label><input type="checkbox"/>Same as above</td>
+		</tr>
+		<tr>
+		    <td><label> Address 1: </label></td>
+		    <td class="shipping"><input type="text" name="addr1" placeholder="Address 1" /></td>
+	        </tr>
+	        <tr>
+		    <td><label> Address 2: </label> </td>
+		    <td class="shipping"><input type="text" name="addr2" placeholder="Address 2 (optional)" /></td>
+		</tr>
+		<tr>
+		    <td><label> City: </label></td>
+		    <td class="shipping"><input type="text" name="city" placeholder="City" /></td>
+	        </tr>
+		<tr>
+		    <td><label> State: </label></td>
+		    <td class="shipping"><input type="text" name="state" placeholder="State" /></td>
+		</tr>
+		<tr>
+		    <td><label> Zip: </label></td>
+		    <td class="shipping"><input type="text" name="zip" placeholder="Zip" /></td>
+		</tr>
+		<tr>
+		    <td colspan=2 class="center-align"><div class="err-msg error-message"></div></td>
+		</tr>
+		<tr>
+		    <td colspan=2 class="center-align"><input type="button" name="summary" value="Order Summary"></td>
+		</tr>
+	    </table>
+	</div>
+	
+    </body>
+</html>

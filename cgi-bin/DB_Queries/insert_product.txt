@@ -1,0 +1,14 @@
+USE jadrn025;
+
+INSERT INTO products values('ABC-111', 'Smartphone', 'Apple', 'iPhone',
+'','',599, 699,'');
+INSERT INTO products values('FRE-124', 'Smartphone', 'Nokia', 'Lumia 170',
+'','',355, 399,'');
+INSERT INTO products values('GXA-345', 'Smartphone', 'Nokia', 'Lumia 800',
+'','',440, 549,'');
+INSERT INTO products values('HTE-569', 'Smartphone', 'HTC', 'Wildfire S',
+'','',260, 319,'');
+INSERT INTO products values('VHY-471', 'Smartphone', 'HTC', 'Chacha',
+'','',299, 369,'');
+INSERT INTO products values('DVB-562', 'Tablet', 'Karbonn', 'Karbonn Tab ST 1',
+'','',133, 159,'');

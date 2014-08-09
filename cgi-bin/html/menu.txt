@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--    
+	Shah, Harsh    Account:  jadrn025
+        CS645, Spring 2014
+        Project #1
+-->
+       
+
+<head>
+	<title>Main Menu</title>
+        <meta http-equiv="Cache-control" content="no-cache" />        
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="http://jadran.sdsu.edu/~jadrn025/proj1/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="http://jadran.sdsu.edu/~jadrn025/proj1/css/tabs.css" />
+	<script type="text/javascript" src="/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/jquery/jQueryUI.js"></script>
+	<script type="text/javascript" src="http://jadran.sdsu.edu/~jadrn025/proj1/js/functions.js"></script>
+	<script type="text/javascript" src="http://jadran.sdsu.edu/~jadrn025/proj1/js/new.js"></script>
+	<script type="text/javascript" src="http://jadran.sdsu.edu/~jadrn025/proj1/js/edit.js"></script>
+	<script type="text/javascript" src="http://jadran.sdsu.edu/~jadrn025/proj1/js/delete.js"></script>
+</head>
+
+<body onunload="">
+  <div class="company-header"><img src="/~jadrn025/proj1/images/logo.png" height="80px"></div>
+
+  <div id="vtab">
+    <ul>
+        <li class="New selected text-style">New Item</li>
+        <li class="Edit text-style">Edit Item</li>
+        <li class="Delete text-style">Delete Item</li>
+    </ul>
+    <div>
+        <h4>New Item <a href="/perl/jadrn025/CGI/process_request.cgi?action=logout"><input type="button" id="logout_button" value="Logout" class="button"/></a></h4>
+	<div>
+	  <form method="post" 
+            action=""
+            name="new_item">
+	     
+	    <table>
+		<tr>
+			<td class="right-align"><label>SKU: </label></td>
+			<td><input type="text" name="sku" size="10" id="new_sku" placeholder="SKU" class="error-box"/><img id="new_processing_gif" width="40px" height="40px" src="/~jadrn025/proj1/images/processing.gif" /><td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Vendor: </label></td>
+			<td><select name="vendor"></select>&nbsp;&nbsp;&nbsp;&nbsp;       
+			<label>Category: </label>
+	                <select name="category"></select></td>
+		</tr> 
+		<tr>
+			<td class="right-align"><label>Vendor's ID: </label></td>
+			<td><input type="text" name="man_sku" size="25" placeholder="Vendor's ID"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Description: </label></td>
+			<td><textarea type="text" name="desc" rows="4" cols="50" placeholder="Description.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Product Features: </label></td>
+			<td><textarea type="text" name="features" rows="4" cols="50" placeholder="Product Features.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Cost (in $): </label></td>
+			<td><input type="text" name="cost" size="5" placeholder="Cost"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Retail (in $): </label></td>
+			<td><input type="text" name="retail" size="5" placeholder="Retail"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Image: </label></td>
+			<td><input type="file" name="image" id="new_image" />   
+			<div id="new_pic"></div></td>
+		</tr>
+	    </table>
+	
+	    <div id="new_message_line" class="error-message">&nbsp;</div>
+	    <div class="buttons">
+		<input type="reset" value="Clear Data" class="button"/>
+		<input id="new_sku_button" type="submit" value="Submit" class="button"/>
+	    </div> 
+	  </form>
+	</div>
+    </div>
+    <div>
+	
+        <h4>Edit Inventory <a href="/perl/jadrn025/CGI/process_request.cgi?action=logout"><input type="button" id="logout_button" value="Logout" class="button"/></a></h4>
+        <div>
+	  <form method="post" 
+            action=""
+            name="edit_item">
+		
+	    <table>
+		<tr>
+			<td class="right-align"><label>SKU: </label></td>
+			<td><input type="text" name="sku" size="10" id="edit_sku" placeholder="SKU" class="error-box"/><img id="edit_processing_gif" width="40px" height="40px" src="/~jadrn025/proj1/images/processing.gif" /><td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Vendor: </label></td>
+			<td><select name="vendor"></select>&nbsp;&nbsp;&nbsp;&nbsp;       
+			<label>Category: </label>
+	                <select name="category"></select></td>
+		</tr> 
+		<tr>
+			<td class="right-align"><label>Vendor's ID: </label></td>
+			<td><input type="text" name="man_sku" size="25" placeholder="Vendor's ID"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Description: </label></td>
+			<td><textarea type="text" name="desc" rows="4" cols="50" placeholder="Description.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Product Features: </label></td>
+			<td><textarea type="text" name="features" rows="4" cols="50" placeholder="Product Features.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Cost (in $): </label></td>
+			<td><input type="text" name="cost" size="5" placeholder="Cost"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Retail (in $): </label></td>
+			<td><input type="text" name="retail" size="5" placeholder="Retail"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Image: </label></td>
+			<td><input type="file" name="image" id="edit_image" />
+			<input type="hidden" name="image_name" >
+			<div id="edit_pic"></div></td>
+		</tr>
+	    </table>
+	    
+	    <div id="edit_message_line" class="error-message">&nbsp;</div>
+	    <div class="buttons">
+		<input type="reset" value="Clear Data" class="button" />
+		<input id="edit_sku_button" type="submit" value="Edit"  class="button" />
+	    </div>
+	  
+	     	
+	  </form>
+	</div>
+    </div>
+    <div>
+        <h4>Delete Inventory <a href="/perl/jadrn025/CGI/process_request.cgi?action=logout"><input type="button" id="logout_button" value="Logout" class="button"/></a></h4>
+        <div>
+	<form method="post" 
+            action=""
+            name="delete_item">
+	     
+	    <table>
+		<tr>
+			<td class="right-align"><label>SKU: </label></td>
+			<td><input type="text" name="sku" size="10" id="delete_sku" placeholder="SKU" class="error-box"/><img id="delete_processing_gif" width="40px" height="40px" src="/~jadrn025/proj1/images/processing.gif" /><td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Vendor: </label></td>
+			<td><select name="vendor"></select>&nbsp;&nbsp;&nbsp;&nbsp;       
+			<label>Category: </label>
+	                <select name="category"></select></td>
+		</tr> 
+		<tr>
+			<td class="right-align"><label>Vendor's ID: </label></td>
+			<td><input type="text" name="man_sku" size="25" placeholder="Vendor's ID"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Description: </label></td>
+			<td><textarea type="text" name="desc" rows="4" cols="50" placeholder="Description.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Product Features: </label></td>
+			<td><textarea type="text" name="features" rows="4" cols="50" placeholder="Product Features.."></textarea></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Cost (in $): </label></td>
+			<td><input type="text" name="cost" size="5" placeholder="Cost"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Retail (in $): </label></td>
+			<td><input type="text" name="retail" size="5" placeholder="Retail"/></td>
+		</tr>
+		<tr>
+			<td class="right-align"><label>Image: </label></td>
+			<td><div id="delete_pic"></div></td>
+		</tr>
+	    </table>
+	    
+	    <div id="delete_message_line" class="error-message">&nbsp;</div>
+	    <div class="buttons">
+	      <input type="reset" value="Clear Data" class="button" />
+              <input id="delete_sku_button" type="submit" value="Delete" class="button" />
+	    </div>
+	</form>
+	</div>
+    </div>
+    
+    <div class="message"> this is message tab
+    <a href="/perl/jadrn025/CGI/process_request.cgi?action=logout"><input type="button" id="logout_button" value="Logout" class="button"/></a>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    history.go(1);
+  </script>
+  
+</body>
+</html>
+
+
+<!--Reference: http://www.faridesign.net/2012/05/create-a-awesome-vertical-tabbed-content-area-using-css3-jquery/ -->

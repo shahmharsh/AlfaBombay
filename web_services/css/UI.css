@@ -1,0 +1,240 @@
+/*
+    Shah, Harsh    Account:  jadrn025
+    CS645, Spring 2014
+    Project #3
+*/
+
+#wrap {
+    padding-bottom: 10px;
+    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
+    z-index: 1; /* Makes sure that your menu remains on top of other page elements */
+}
+
+.navbar	{
+    height: 50px;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+    z-index: 12;
+}
+  
+.navbar li {
+    padding-bottom: 10px;
+    height: auto;
+    width: 150px;  
+    text-align: center;  
+    list-style: none;  
+    font: normal bold 12px/1.2em Arial, Verdana, Helvetica;  
+    padding: 0;
+    margin: 0;
+    background-color: #c0c0c0;
+}
+
+.navbar li:first-child {
+    border-top: 1px solid #000000; 
+}
+
+.navbar li:last-child {
+    border-bottom: 1px solid #000000; 
+}
+
+.navbar li{
+    padding: 18px 0;  
+    border-left: 1px solid #000000; 
+    border-right: 1px solid #000000; 
+    text-decoration: none;  
+    color: #000; 
+    display: block;
+}
+
+.navbar li:hover {
+    background-color: rgba(4, 6, 0, 0.00);
+}
+
+#Search-Box {
+    position: absolute;
+    left: 35%;
+    top: 17%;
+}
+
+#search-text {
+    width: 300px;
+    height: 30px;
+}
+
+#cart {
+    position: absolute;
+    left: 90%;
+    text-align: center;
+    top: 17%;
+}
+
+#products {
+    position: absolute;
+    left: 20%;
+    top: 27%;
+}
+
+.element {
+    border:1px solid;
+    border-color: #ffffff;
+    text-align:center;
+    float: left;
+    width: 150px;
+    height: 220px;
+    vertical-align:middle;
+    margin: 20px;
+    padding: 5px;
+}
+
+.icon{
+    border:1px solid;
+    border-color: #ffffff;
+    float: left;
+    width: 100px;
+    height: 140px;
+    vertical-align:middle;
+}
+
+.element:hover, .icon:hover {
+    border: 1px solid #686868;
+    box-shadow: 0 0 3px #282828;
+}
+
+.product_price {
+    text-align: center;
+    font-family:"Courier New", Courier, monospace;
+    /*border-top: 1px solid;*/
+    /*border-color: #787878;*/
+    padding-top: 20px;
+}
+
+.product_header {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 17px;
+    color: #253234;
+    border-bottom: 1px solid;
+    border-color: #787878;
+    padding-bottom: 15px;
+}
+
+.customer-details{
+    float: right;
+    margin-right: 20px;
+}
+
+.pic {
+    /*display: block;*/
+    max-width:150px;
+    /*max-height:200px;*/
+    height: 100px;
+    margin-top: 15px; 
+}
+
+.icon_pic{
+    /*display: block;*/
+    max-width:100px;
+    /*max-height:200px;*/
+    height: 70px;
+    margin-top: 7px;
+}
+
+p.hidden {display:none;}
+
+.large_pic {
+    max-width:200px;
+    max-height: 300px;
+}
+
+.add_to_cart, .Lfloat{
+    float: left;
+}
+
+.padding {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.content {
+    float: right;
+    width: 300px;
+}
+
+#qty {
+    font-size: 13px;
+    text-align: right;
+    width:100px;
+}
+
+.quantity{
+    width: 40px;
+    text-align: right;
+}
+
+input [name=add] {
+    text-align: center;
+    font-size:13px;
+}
+
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    text-align: center;
+    float: none;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.center-align{
+    text-align: center;
+}
+
+.delete{
+    text-decoration: underline;
+    color: blue;
+}
+
+tbody > tr > td {
+    text-align: center;
+    padding: 10px;
+}
+
+.customer-details {
+    position: absolute;
+    left: 50%;
+    top: 27%;
+}
+
+.table-header {
+    font-size: 20px;
+}
+
+.summary-cart{
+    padding-right: 20px;
+    border-right:2px solid black;
+}
+
+#checkoutButton{
+    padding-top: 20px;
+    padding-left: 140px;
+}
+
+.features, .description{
+    font-size: 10px;
+}
+
+.features-header, .description-header{
+    font-size: 13px;
+    text-decoration: underline;
+}
+

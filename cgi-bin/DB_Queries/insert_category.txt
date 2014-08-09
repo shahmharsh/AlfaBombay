@@ -1,0 +1,8 @@
+USE jadrn025;
+
+INSERT INTO category(name) values ('Smartphone');
+INSERT INTO category(name) values ('Touch Screen');
+INSERT INTO category(name) values ('Dual SIM');
+INSERT INTO category(name) values ('Single SIM');
+INSERT INTO category(name) values ('Tablet');
+

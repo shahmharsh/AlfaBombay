@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;
+    charset=iso-8859-1" />
+   
+    <title>AJAX with Servlets</title>
+    
+<!-- of course, you want to substitute your CSS file for my sdsu.css -->    
+    <link rel="stylesheet" type="text/css" href="http://pindar.sdsu.edu/sdsu.css" />
+    
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+
+//Ajax methods
+
+function getStatus() {
+	var url = "http://jadran.sdsu.edu/jadrn000/servlet/AjaxStatus?name=";
+    	url += document.getElementById('name').value;
+	$.get(url, handleData);
+	}
+        	
+    
+function handleData(serverResponse) {
+	var handle = document.getElementById("answer");
+	handle.innerHTML = serverResponse;
+	}		
+							
+</script>
+    
+    
+</head>
+
+<body>
+    <div>
+        <h1>Processes Running in Your Account</h1>
+        <pre>
+        <h4 id="answer">&nbsp;</h4>
+        </pre>
+        <input type="text" name="name" id="name">
+        <input type="button" name="status" value="Processes Running"
+        onclick="getStatus()" /><p />
+        <p>
+        <i>Note, this will lookup activity only for accounts of the
+        form jadrnxxx</i></p>
+       
+    </div>
+</body>
+
+</html>
